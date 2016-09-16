@@ -35,6 +35,17 @@ public class CustomerFormViewHelper {
     public String getEmail(){
         return getTextFieldValue(R.id.activity_new_customer_email);
     }
+    public String getPant() {
+        return getTextFieldValue(R.id.activity_new_customer_pant);
+    }
+
+    public String getShirt() {
+        return getTextFieldValue(R.id.activity_new_customer_shirt);
+    }
+
+    public String getCoat() {
+        return getTextFieldValue(R.id.activity_new_customer_coat);
+    }
 
     public String updateCno(){ return getTextFieldValue(R.id.activity_customer_cno);    }
     public String updateName(){
@@ -55,6 +66,14 @@ public class CustomerFormViewHelper {
     public String updateEmail(){
         return getTextFieldValue(R.id.activity_customer_email);
     }
+    public String updatePant(){
+        return getTextFieldValue(R.id.activity_customer_pant);
+    }
+    public String updateShirt(){
+        return getTextFieldValue(R.id.activity_customer_shirt);
+    }
+    public String updateCoat(){        return getTextFieldValue(R.id.activity_customer_coat);
+    }
 
     private String getTextFieldValue(int fieldId) {
         EditText fieldid = (EditText) activity.findViewById(fieldId);
@@ -65,12 +84,12 @@ public class CustomerFormViewHelper {
 
 
     public Customer createCustomer() {
-        return new Customer(getCno(),getName(),getMobile(),getOffice(),getReference(),getAddress(),getEmail());
+        return new Customer(getCno(),getName(),getMobile(),getOffice(),getReference(),getAddress(),getEmail(),getPant(),getShirt(),getCoat());
     }
 
 
     public Customer updateCustomer() {
-        return new Customer(updateCno(),updateName(),updateMobile(),updateOffice(),updateReference(),updateAddress(),updateEmail());
+        return new Customer(updateCno(),updateName(),updateMobile(),updateOffice(),updateReference(),updateAddress(),updateEmail(),updatePant(),updateShirt(),updateCoat());
     }
 
     public void fillCustomerDetails(Customer customer) {
@@ -89,7 +108,15 @@ public class CustomerFormViewHelper {
         email.setText(customer.getEmail());
         EditText address = (EditText) activity.findViewById(R.id.activity_customer_address);
         address.setText(customer.getAddress());
+        EditText pant = (EditText) activity.findViewById(R.id.activity_customer_pant);
+        pant.setText(customer.getPant());
+        EditText shirt = (EditText) activity.findViewById(R.id.activity_customer_shirt);
+        shirt.setText(customer.getShirt());
+        EditText coat = (EditText) activity.findViewById(R.id.activity_customer_coat);
+        coat.setText(customer.getCoat());
 
 
     }
+
+
 }

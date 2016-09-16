@@ -16,8 +16,11 @@ public class Customer implements Serializable {
     private final String reference;
     private final String address;
     private final String email;
+    private final String pant;
+    private final String shirt;
+    private final String coat;
 
-    public Customer(String cno, String name, String mobile, String office, String address, String reference, String email) {
+    public Customer(String cno, String name, String mobile, String office, String address, String reference, String email,String pant, String shirt,String coat) {
 
         this.cno = cno;
         this.name = name;
@@ -26,6 +29,9 @@ public class Customer implements Serializable {
         this.address = address;
         this.reference = reference;
         this.email = email;
+        this.pant=pant;
+        this.shirt=shirt;
+        this.coat=coat;
     }
 
 
@@ -67,17 +73,15 @@ public class Customer implements Serializable {
         return cno;
     }
 
+    public String getPant(){return pant;}
+
+    public String getShirt(){return shirt;}
+
+    public String getCoat() {
+        return coat;
+    }
 
 
-/*    public Customer(String name, String mobile, String office, String reference, String address, String email) {
-
-        this.name = name;
-        this.mobile = mobile;
-        this.office = office;
-        this.reference = reference;
-        this.address = address;
-        this.email = email;
-    }*/
 
     public ContentValues toContentValues() {
         ContentValues data = new ContentValues();
@@ -88,6 +92,9 @@ public class Customer implements Serializable {
         data.put("address",address);
         data.put("reference",reference);
         data.put("email",email);
+        data.put("pant",pant);
+        data.put("shirt",shirt);
+        data.put("coat",coat);
         return data;
     }
 

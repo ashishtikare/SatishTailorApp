@@ -24,7 +24,7 @@ public class CustomerDAO extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE customers(id TEXT NOT NULL PRIMARY KEY, name TEXT NOT NULL, mobile TEXT, office TEXT, address TEXT, reference TEXT, email TEXT, pantmeasure TEXT, pantdetail TEXT, shirtmeasure TEXT, shirtdetail TEXT, coatmeasure TEXT,coatdetail TEXT, jubbameasure TEXT, jubbadetail TEXT, pyjamameasure TEXT,pyjamadetail TEXT )";
+        String sql = "CREATE TABLE customers(id TEXT NOT NULL PRIMARY KEY, name TEXT NOT NULL, mobile TEXT, office TEXT, address TEXT, reference TEXT, email TEXT, pant TEXT, shirt TEXT,coat TEXT)";
         db.execSQL(sql);
     }
 
@@ -51,7 +51,10 @@ public class CustomerDAO extends SQLiteOpenHelper {
             String address = cursor.getString(cursor.getColumnIndex("address"));
             String reference = cursor.getString(cursor.getColumnIndex("reference"));
             String email = cursor.getString(cursor.getColumnIndex("email"));
-            Customer customer = new Customer(cno,name,mobile,office,address,reference,email);
+            String pant = cursor.getString(cursor.getColumnIndex("pant"));
+            String shirt = cursor.getString(cursor.getColumnIndex("shirt"));
+            String coat = cursor.getString(cursor.getColumnIndex("coat"));
+            Customer customer = new Customer(cno,name,mobile,office,address,reference,email,pant,shirt,coat);
             customers.add(customer);
         }
         return customers;
