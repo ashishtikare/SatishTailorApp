@@ -18,43 +18,77 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <EditText
-                android:id="@+id/activity_customer_cno"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/cnowrapper"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="CustomerNumber"/>
-            <EditText
-                android:id="@+id/activity_customer_name"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/activity_customer_cno"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="CustomerNumber"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/nameWrapper"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Name"/>
-            <EditText
-                android:id="@+id/activity_customer_mobile"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/activity_customer_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Name"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/mobileWrapper"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Mobile number"/>
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/activity_customer_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile number"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/refWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/activity_customer_reference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Reference"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/offWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/activity_customer_office"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Office number"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/addressWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/activity_customer_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Address"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/emailWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/activity_customer_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"/>
+            </android.support.design.widget.TextInputLayout>
 
-            <EditText
-                android:id="@+id/activity_customer_reference"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Reference"/>
-
-            <EditText
-                android:id="@+id/activity_customer_office"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Office number"/>
-            <EditText
-                android:id="@+id/activity_customer_address"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Address"/>
-            <EditText
-                android:id="@+id/activity_customer_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Email"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -63,6 +97,11 @@
                 android:textSize="10pt"
                 android:gravity="center_horizontal"
                 android:layout_marginBottom="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PANT"
+                android:textSize="8pt"/>
 
             <EditText
                 android:id="@+id/activity_customer_pant"
@@ -70,12 +109,22 @@
                 android:layout_height="wrap_content"
                 android:hint="PANT"
                 android:layout_marginBottom="15dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SHIRT"
+                android:textSize="8pt"/>
             <EditText
                 android:id="@+id/activity_customer_shirt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="SHIRT"
                 android:layout_marginBottom="15dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="COAT"
+                android:textSize="8pt"/>
             <EditText
                 android:id="@+id/activity_customer_coat"
                 android:layout_width="match_parent"

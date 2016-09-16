@@ -1,6 +1,7 @@
 package satish.com.satistailors;
 
 import android.content.Intent;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,6 +15,22 @@ public class CustomerDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_details);
+
+        final TextInputLayout cnoWrapper = (TextInputLayout) findViewById(R.id.cnowrapper);
+        cnoWrapper.setHint("C.No");
+        final TextInputLayout nameWrapper = (TextInputLayout) findViewById(R.id.nameWrapper);
+        nameWrapper.setHint("Name");
+        final TextInputLayout mobileWrapper = (TextInputLayout) findViewById(R.id.mobileWrapper);
+        mobileWrapper.setHint("Mobile");
+        final TextInputLayout addressWrapper = (TextInputLayout) findViewById(R.id.addressWrapper);
+        addressWrapper.setHint("Address");
+        final TextInputLayout officeWrapper = (TextInputLayout) findViewById(R.id.offWrapper);
+        officeWrapper.setHint("Office");
+        final TextInputLayout refWrapper = (TextInputLayout) findViewById(R.id.refWrapper);
+        refWrapper.setHint("Reference");
+        final TextInputLayout emailWrapper = (TextInputLayout) findViewById(R.id.emailWrapper);
+        emailWrapper.setHint("Email");
+
         if (intentionForUpdate()){
             Customer customer = getOriginalCustomer();
             CustomerFormViewHelper helper = new CustomerFormViewHelper(this);
