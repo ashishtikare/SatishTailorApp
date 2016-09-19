@@ -4,6 +4,7 @@ package satish.com.satistailors;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,6 +20,13 @@ public class NewCustomer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_customer);
+
+        final TextInputLayout newPantWrapper = (TextInputLayout) findViewById(R.id.newpantwrapper);
+        newPantWrapper.setHint("PANT");
+        final TextInputLayout newShirtWrapper = (TextInputLayout) findViewById(R.id.newshirtwrapper);
+        newShirtWrapper.setHint("SHIRT");
+        final TextInputLayout newCoatWrapper = (TextInputLayout) findViewById(R.id.newcoatwrapper);
+        newCoatWrapper.setHint("COAT");
 
     }
 
