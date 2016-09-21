@@ -4,12 +4,17 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -17,11 +22,15 @@ import java.util.List;
 
 public class HomePage extends AppCompatActivity {
 
-
+    ArrayAdapter<Customer> adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+
+
+
+
 
 
         getcustomerList().setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -95,8 +104,25 @@ public class HomePage extends AppCompatActivity {
         List<Customer> customers = dao.listAll();
         dao.close();
         this.getcustomerList();
-        ArrayAdapter<Customer> adapter = new ArrayAdapter<Customer>(this, android.R.layout.simple_list_item_1, customers);
+        adapter = new ArrayAdapter<Customer>(this, android.R.layout.simple_list_item_1, customers);
         getcustomerList().setAdapter(adapter);
+        EditText searchBox = (EditText) findViewById(R.id.searchbox);
+        searchBox.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                HomePage.this.adapter.getFilter().filter(s);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
     private ListView getcustomerList() {

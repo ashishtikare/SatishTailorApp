@@ -18,10 +18,6 @@ public class CustomerDAO extends SQLiteOpenHelper {
     }
 
 
-
-    // EDIT Add provision for last updated in db and customer Details screen
-    //TO-DO TAbbed view, Edit/save option for details screen ie. Update function
-
     @Override
     public void onCreate(SQLiteDatabase db) {
         String sql = "CREATE TABLE customers(id TEXT NOT NULL PRIMARY KEY, name TEXT NOT NULL, mobile TEXT, office TEXT, address TEXT, reference TEXT, email TEXT, pant TEXT, shirt TEXT,coat TEXT)";
@@ -60,6 +56,33 @@ public class CustomerDAO extends SQLiteOpenHelper {
         return customers;
     }
 
+    public List <Customer> retrieve(String searchWord){
+
+        java.util.List<Customer> customers = new ArrayList<>();
+        Cursor cursor =  null;
+        if(searchWord!=null && searchWord.length()>0){
+            String sql = "SELECT * FROM customers WHERE name LIKE '%"+searchWord+"%'";
+            SQLiteDatabase database = getReadableDatabase();
+            cursor=database.rawQuery(sql,null);
+            while (cursor.moveToNext()){
+                String cno = cursor.getString(cursor.getColumnIndex("id"));
+                String name = cursor.getString(cursor.getColumnIndex("name"));
+                String mobile = cursor.getString(cursor.getColumnIndex("mobile"));
+                String office = cursor.getString(cursor.getColumnIndex("office"));
+                String address = cursor.getString(cursor.getColumnIndex("address"));
+                String reference = cursor.getString(cursor.getColumnIndex("reference"));
+                String email = cursor.getString(cursor.getColumnIndex("email"));
+                String pant = cursor.getString(cursor.getColumnIndex("pant"));
+                String shirt = cursor.getString(cursor.getColumnIndex("shirt"));
+                String coat = cursor.getString(cursor.getColumnIndex("coat"));
+                Customer customer = new Customer(cno,name,mobile,office,address,reference,email,pant,shirt,coat);
+                customers.add(customer);
+            }
+
+        }
+        return customers;
+    }
+
     public void remove(Customer customer) {
         SQLiteDatabase database = getWritableDatabase();
         String[] params = {customer.getId()+""};
@@ -73,4 +96,6 @@ public class CustomerDAO extends SQLiteOpenHelper {
         String[] params={originalId + ""};
         database.update("customers",data,"id=?",params);
     }
+
+
 }

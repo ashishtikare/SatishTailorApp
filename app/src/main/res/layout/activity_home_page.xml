@@ -19,32 +19,25 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/button_background"/>
 
-        <LinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Customer No.or Name" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Search"
-            android:layout_gravity="right"
-            android:id="@+id/activity_home_page_search_button"/>
+            android:id="@+id/searchbox"
+            android:hint="SEARCH.."
+            android:inputType="textVisiblePassword"/>
 
         <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/activity_home_page_customerList">
-
         </ListView>
 
-        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>
 
 
