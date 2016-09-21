@@ -22,13 +22,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/sblogo">
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:id="@+id/searchbox"
-            android:hint="SEARCH.."
+            android:hint="S E A R C H . . "
+            android:textAlignment="viewEnd"
+            android:textColor="#afaeae"
+            android:textStyle="italic"
+            android:fontFamily="sans-serif-condensed"
             android:inputType="textVisiblePassword"/>
 
         <ListView

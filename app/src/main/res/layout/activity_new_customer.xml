@@ -2,14 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingTop="10dp">
 
     <TextView
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="NEW CUSTOMER SCREEN"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="bold"
+        android:text="N E W  C U S T O M E R  S C R E E N"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="10pt"
+        android:textSize="9pt"
         android:gravity="center_horizontal"/>
     <ScrollView
         android:layout_width="match_parent"
@@ -58,11 +63,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="MEASUREMENTS"
+                android:paddingTop="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
+                android:text="M E A S U R E M E N T S"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="10pt"
-                android:gravity="center_horizontal"
-                android:layout_marginBottom="10dp"/>
+                android:textSize="9pt"
+                android:gravity="center_horizontal"/>
+
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/newpantwrapper"
                 android:layout_width="match_parent"
