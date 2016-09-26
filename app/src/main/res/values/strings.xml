@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">STUDIO BESPOKE</string>
+    <string name="cno_required">CNo. must be atleast 3 digits</string>
+    <string name="cname_required">Enter Valid Name</string>
 </resources>

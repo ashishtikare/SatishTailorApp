@@ -3,6 +3,7 @@ package satish.com.satistailors;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.text.Editable;
@@ -28,11 +29,6 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-
-
-
-
-
         getcustomerList().setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> customerList, View item, int position, long id) {
@@ -57,8 +53,8 @@ public class HomePage extends AppCompatActivity {
 
         registerForContextMenu(getcustomerList());
 
-        Button newCustomer = (Button) findViewById(R.id.activity_home_page_newCustomer_button);
-        newCustomer.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.activity_home_page_add_button);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(HomePage.this,"Showing form..",Toast.LENGTH_SHORT).show();

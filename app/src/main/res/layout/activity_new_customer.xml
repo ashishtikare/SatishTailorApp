@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="10dp">
+    android:paddingTop="10dp"
+    android:background="@drawable/background">
 
     <TextView
         android:paddingTop="10dp"
@@ -23,33 +24,57 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <EditText
-                android:id="@+id/activity_new_customer_cno"
+            <android.support.design.widget.TextInputLayout
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Customer Number"/>
-            <EditText
-                android:id="@+id/activity_new_customer_name"
+                android:id="@+id/newcnowrapper">
+
+                <EditText
+                    android:id="@+id/activity_new_customer_cno"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Customer Number"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:lines="1"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Name"/>
+                android:id="@+id/newcnamewrapper">
+                <EditText
+                    android:id="@+id/activity_new_customer_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Name"
+                    android:singleLine="true"
+                    android:lines="1"/>
+            </android.support.design.widget.TextInputLayout>
             <EditText
                 android:id="@+id/activity_new_customer_mobile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Mobile number"/>
+                android:hint="Mobile number"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:lines="1"/>
 
             <EditText
                 android:id="@+id/activity_new_customer_reference"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Reference"/>
+                android:hint="Reference"
+                android:singleLine="true"
+                android:lines="1"/>
 
             <EditText
                 android:id="@+id/activity_new_customer_office"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Office number"/>
+                android:hint="Office number"
+                android:inputType="number"
+                android:singleLine="true"
+                android:lines="1"/>
             <EditText
                 android:id="@+id/activity_new_customer_address"
                 android:layout_width="match_parent"
@@ -59,7 +84,10 @@
                 android:id="@+id/activity_new_customer_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email"/>
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:lines="1"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -79,7 +107,8 @@
                     android:id="@+id/activity_new_customer_pant"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="PANT"/>
+                    android:hint="PANT"
+                    android:inputType="numberDecimal"/>
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/newshirtwrapper"
@@ -89,7 +118,8 @@
                     android:id="@+id/activity_new_customer_shirt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="SHIRT"/>
+                    android:hint="SHIRT"
+                    android:inputType="numberDecimal"/>
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/newcoatwrapper"
@@ -99,7 +129,8 @@
                     android:id="@+id/activity_new_customer_coat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="COAT"/>
+                    android:hint="COAT"
+                    android:inputType="numberDecimal"/>
             </android.support.design.widget.TextInputLayout>
 
 

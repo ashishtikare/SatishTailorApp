@@ -1,16 +1,12 @@
 package satish.com.satistailors;
 
-
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 
@@ -21,12 +17,63 @@ public class NewCustomer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_customer);
 
+        final TextInputLayout newCnoWrapper = (TextInputLayout) findViewById(R.id.newcnowrapper);
+        newCnoWrapper.setHint("CNo.");
+        final TextInputLayout newCnameWrapper = (TextInputLayout) findViewById(R.id.newcnamewrapper);
+        newCnameWrapper.setHint("NAME");
         final TextInputLayout newPantWrapper = (TextInputLayout) findViewById(R.id.newpantwrapper);
         newPantWrapper.setHint("PANT");
         final TextInputLayout newShirtWrapper = (TextInputLayout) findViewById(R.id.newshirtwrapper);
         newShirtWrapper.setHint("SHIRT");
         final TextInputLayout newCoatWrapper = (TextInputLayout) findViewById(R.id.newcoatwrapper);
         newCoatWrapper.setHint("COAT");
+
+
+        newCnoWrapper.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() < 3) {
+                    newCnoWrapper.setError(getString(R.string.cno_required));
+                    newCnoWrapper.setErrorEnabled(true);
+                } else {
+                    newCnoWrapper.setErrorEnabled(false);
+                }
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        newCnameWrapper.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() < 3) {
+                    newCnameWrapper.setError(getString(R.string.cname_required));
+                    newCnameWrapper.setErrorEnabled(true);
+                } else {
+                    newCnameWrapper.setErrorEnabled(false);
+                }
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
     }
 

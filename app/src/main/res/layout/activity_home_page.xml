@@ -1,39 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background">
 
-    <Button
-        android:id="@+id/activity_home_page_newCustomer_button"
-        android:layout_width="56sp"
-        android:layout_height="56sp"
-        android:text="+"
-        android:textColor="#ffffff"
-        android:textSize="40sp"
-        android:elevation="10dp"
-        android:stateListAnimator="@null"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/button_background"/>
+
+<android.support.design.widget.FloatingActionButton
+    android:id="@+id/activity_home_page_add_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+  android:src="@drawable/add_user"
+    app:rippleColor="@color/colorAccent"
+    app:elevation="4dp"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginBottom="16dp"
+    android:layout_marginRight="16dp">
+    </android.support.design.widget.FloatingActionButton>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/sblogo">
+        android:orientation="vertical">
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:textStyle="italic"
             android:id="@+id/searchbox"
             android:hint="S E A R C H . . "
             android:textAlignment="viewEnd"
-            android:textColor="#afaeae"
-            android:textStyle="italic"
+            android:textColor="#111111"
             android:fontFamily="sans-serif-condensed"
             android:inputType="textVisiblePassword"/>
 
