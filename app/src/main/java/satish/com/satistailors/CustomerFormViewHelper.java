@@ -4,6 +4,7 @@ import android.app.Activity;
 
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 /**
  * Created by Ash on 29-Jun-16.

@@ -9,6 +9,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import java.util.List;
+
 
 public class NewCustomer extends AppCompatActivity {
 
@@ -28,9 +30,9 @@ public class NewCustomer extends AppCompatActivity {
         final TextInputLayout newCoatWrapper = (TextInputLayout) findViewById(R.id.newcoatwrapper);
         newCoatWrapper.setHint("COAT");
 
-
         newCnoWrapper.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
+
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
             }

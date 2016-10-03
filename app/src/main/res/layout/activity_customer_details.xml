@@ -31,7 +31,8 @@
                     android:id="@+id/activity_customer_cno"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="CustomerNumber"/>
+                    android:text="CNo."
+                    android:focusable="false"/>
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/nameWrapper"
@@ -115,7 +116,6 @@
                 android:id="@+id/activity_customer_pant"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="PANT"
                 android:layout_marginBottom="15dp"/>
             <TextView
                 android:layout_width="match_parent"
@@ -126,7 +126,6 @@
                 android:id="@+id/activity_customer_shirt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="SHIRT"
                 android:layout_marginBottom="15dp"/>
             <TextView
                 android:layout_width="match_parent"
@@ -137,7 +136,6 @@
                 android:id="@+id/activity_customer_coat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="COAT"
                 android:layout_marginBottom="15dp"/>
         </LinearLayout>
     </ScrollView>
