@@ -15,7 +15,7 @@
         android:textStyle="bold"
         android:text="N E W  C U S T O M E R  S C R E E N"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="9pt"
+        android:textSize="10pt"
         android:gravity="center_horizontal"/>
     <ScrollView
         android:layout_width="match_parent"
@@ -30,6 +30,7 @@
                 android:id="@+id/newcnowrapper">
 
                 <EditText
+                    android:textSize="9pt"
                     android:id="@+id/activity_new_customer_cno"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -43,17 +44,20 @@
                 android:layout_width="match_parent"
                 android:id="@+id/newcnamewrapper">
                 <EditText
+                    android:textSize="9pt"
                     android:id="@+id/activity_new_customer_name"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="Name"
                     android:singleLine="true"
-                    android:lines="1"/>
+                    android:lines="1"
+                    android:inputType="textCapCharacters"/>
             </android.support.design.widget.TextInputLayout>
             <EditText
                 android:id="@+id/activity_new_customer_mobile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="9pt"
                 android:hint="Mobile number"
                 android:inputType="phone"
                 android:singleLine="true"
@@ -63,14 +67,17 @@
                 android:id="@+id/activity_new_customer_reference"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="9pt"
                 android:hint="Reference"
                 android:singleLine="true"
-                android:lines="1"/>
+                android:lines="1"
+                android:inputType="textCapCharacters"/>
 
             <EditText
                 android:id="@+id/activity_new_customer_office"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="9pt"
                 android:hint="Office number"
                 android:inputType="number"
                 android:singleLine="true"
@@ -79,13 +86,16 @@
                 android:id="@+id/activity_new_customer_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Address"/>
+                android:textSize="9pt"
+                android:hint="Address"
+                android:inputType="textCapCharacters"/>
             <EditText
                 android:id="@+id/activity_new_customer_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="9pt"
                 android:hint="Email"
-                android:inputType="textEmailAddress"
+                android:inputType="textEmailAddress|textCapCharacters"
                 android:singleLine="true"
                 android:lines="1"/>
             <TextView
@@ -96,7 +106,7 @@
                 android:textStyle="bold"
                 android:text="M E A S U R E M E N T S"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="9pt"
+                android:textSize="10pt"
                 android:gravity="center_horizontal"/>
 
             <android.support.design.widget.TextInputLayout
@@ -107,7 +117,9 @@
                     android:id="@+id/activity_new_customer_pant"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="PANT"/>
+                    android:textSize="9pt"
+                    android:hint="PANT"
+                    android:inputType="textCapCharacters"/>
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/newshirtwrapper"
@@ -117,7 +129,9 @@
                     android:id="@+id/activity_new_customer_shirt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="SHIRT"/>
+                    android:textSize="9pt"
+                    android:hint="SHIRT"
+                    android:inputType="textCapCharacters"/>
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/newcoatwrapper"
@@ -127,7 +141,9 @@
                     android:id="@+id/activity_new_customer_coat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="COAT"   />
+                    android:textSize="9pt"
+                    android:hint="COAT"
+                    android:inputType="textCapCharacters"/>
             </android.support.design.widget.TextInputLayout>
 
 

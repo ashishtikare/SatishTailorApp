@@ -42,7 +42,8 @@
                     android:id="@+id/activity_customer_name"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Name"/>
+                    android:hint="Name"
+                    android:inputType="textCapCharacters"/>
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/mobileWrapper"
@@ -62,7 +63,8 @@
                     android:id="@+id/activity_customer_reference"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Reference"/>
+                    android:hint="Reference"
+                    android:inputType="textCapCharacters"/>
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/offWrapper"
@@ -82,7 +84,8 @@
                     android:id="@+id/activity_customer_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Address"/>
+                    android:hint="Address"
+                    android:inputType="textCapCharacters"/>
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/emailWrapper"
@@ -92,7 +95,8 @@
                     android:id="@+id/activity_customer_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Email"/>
+                    android:hint="Email"
+                    android:inputType="textCapCharacters"/>
             </android.support.design.widget.TextInputLayout>
 
             <TextView
@@ -116,7 +120,8 @@
                 android:id="@+id/activity_customer_pant"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"/>
+                android:layout_marginBottom="15dp"
+                android:inputType="textCapCharacters"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -126,7 +131,8 @@
                 android:id="@+id/activity_customer_shirt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"/>
+                android:layout_marginBottom="15dp"
+                android:inputType="textCapCharacters"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -136,7 +142,8 @@
                 android:id="@+id/activity_customer_coat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"/>
+                android:layout_marginBottom="15dp"
+                android:inputType="textCapCharacters"/>
         </LinearLayout>
     </ScrollView>
 

@@ -20,9 +20,9 @@ public class NewCustomer extends AppCompatActivity {
         setContentView(R.layout.activity_new_customer);
 
         final TextInputLayout newCnoWrapper = (TextInputLayout) findViewById(R.id.newcnowrapper);
-        newCnoWrapper.setHint("CNo.");
+        newCnoWrapper.setHint("Customer Number.");
         final TextInputLayout newCnameWrapper = (TextInputLayout) findViewById(R.id.newcnamewrapper);
-        newCnameWrapper.setHint("NAME");
+        newCnameWrapper.setHint("Name");
         final TextInputLayout newPantWrapper = (TextInputLayout) findViewById(R.id.newpantwrapper);
         newPantWrapper.setHint("PANT");
         final TextInputLayout newShirtWrapper = (TextInputLayout) findViewById(R.id.newshirtwrapper);
